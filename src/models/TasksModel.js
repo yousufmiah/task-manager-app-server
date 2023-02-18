@@ -7,7 +7,7 @@ const DataSchema = mongoose.Schema(
     description: { type: String },
     status: { type: String },
     email: { type: String },
-    createDate: { type: Date, default: Date.now() },
+    createdDate: { type: Date, default: Date.now() },
   },
   { versionKey: false }
 );
