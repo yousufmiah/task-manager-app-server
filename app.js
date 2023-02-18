@@ -31,19 +31,19 @@ app.use(bodyParser.json()); //bodyParser er vitore json kaj korchi tai
 const limiter = rateLimit({ windows: 15 * 60 * 1000, max: 3000 });
 app.use(limiter);
 
-/*
+
 //Mongo DB Database connection
 const URI = "mongodb+srv://yousuf:<password>@cluster0.oj26mwr.mongodb.net/todo?retryWrites=true&w=majority"
 const OPTION = { user: "yousuf", pass: "yousuf", autoIndex: true };
 
-*/
 
 
+/*
 //localhost connection
 const URI = "mongodb://localhost:27017/Todo";
 //localhost user password nai, tai faka
 const OPTION = { user: "", pass: "", autoIndex: true };
-
+*/
 
 mongoose.connect(URI, OPTION, (error) => {
   console.log("Connection Success");
