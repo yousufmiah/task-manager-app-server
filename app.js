@@ -22,6 +22,10 @@ app.use(helmet());
 app.use(mongoSanitize());
 app.use(xssClean());
 app.use(hpp());
+app.use(express.json({limit:"50mb"}))
+app.use(express.urlencoded({limit:"50mb"}))
+
+
 
 //bodyParser implement
 app.use(bodyParser.json()); //bodyParser er vitore json kaj korchi tai
